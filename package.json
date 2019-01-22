@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "How to use create-react-app with a custom Node API on Heroku",
   "engines": {
-    "node": "10.x"
+    "node": "11.x"
   },
   "scripts": {
-    "start": "node server",
+    "start": "nodemon server",
     "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
@@ -16,9 +16,13 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "body-parser-xml": "^1.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "json-schema-generator": "^2.0.6",
+    "morgan": "^1.9.1",
+    "to-json-schema": "^0.2.0",
+    "xml2json": "^0.11.2"
   },
   "repository": {
     "type": "git",
