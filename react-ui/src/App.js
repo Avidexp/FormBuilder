@@ -35,7 +35,7 @@ constructor(props){
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">GTZ Form Generator</h1>
+          <h1 className="App-title">Form Generator</h1>
         </header>
 <br/>
 <br/>
