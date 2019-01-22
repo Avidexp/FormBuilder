@@ -18,6 +18,7 @@ constructor(props){
    var request = xmldata;
    axios.post('/api/v1/sendToESB', request)
    .then((response) => {
+     console.log(response.data.body);
     console.log("===========================");
     this.setState({showForm: true, schema: JSON.parse(response.data.body)})
         console.log(JSON.parse(response.data.body));
