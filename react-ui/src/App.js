@@ -30,6 +30,7 @@ constructor(props){
     console.log("BUTTON CLICKED");
     }
     log = (type) => console.log.bind(console, type);
+    
   render() {
     return (
       <div className="App">

@@ -6,7 +6,6 @@ const axios = require('axios');
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
-var parser = require('xml2json');
 const toJsonSchema = require('to-json-schema');
 
 require('body-parser-xml')(bodyParser);
@@ -45,7 +44,7 @@ if (!isDev && cluster.isMaster) {
      console.log("====== LOOK HERE =========");
      //console.log(response);
      
-     const schema = toJsonSchema(response);
+     const schema = toJsonSchema(response, {arrays: {mode: 'all'}});
 
      console.log(schema);
      res.send({body:JSON.stringify(schema)});
